@@ -96,11 +96,6 @@ function onReady() {
 		// Position niveau load
 		level = levelLoad;
 
-		// Mémorisation du meilleurs scrore
-		if (localStorage.bestscore) {
-			bestscore = Number(localStorage.bestscore);
-		}
-
 		// Visualisation du jeu
 		renderGame();
 	}
@@ -161,7 +156,6 @@ function gameOver() {
 
 	if (score > bestscore) {
 		bestscore = score;
-		localStorage.bestscore = bestscore;
 	}
 
   var device = getParameterByName('device');
