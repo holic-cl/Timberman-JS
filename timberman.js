@@ -195,7 +195,7 @@ function executeOnAndroid (score) {
 
 function executeOnIOS (score) {
   try {
-    webkit.messageHandlers.callbackHandler.gameOver(score);
+    window.webkit.messageHandlers.gameOver.postMessage(score);
   } catch (err) {
     console.log("The ios context does not exist");
   }
